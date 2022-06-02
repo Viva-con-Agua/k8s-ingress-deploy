@@ -1,0 +1,8 @@
+# this patch hardcodes the target nodePort values on service objects so that they don't get chosen randomly by
+# kubernetes but are consistent
+- op: add
+  path: /spec/ports/0/nodePort
+  value: 30080
+- op: add
+  path: /spec/ports/1/nodePort
+  value: 30443
