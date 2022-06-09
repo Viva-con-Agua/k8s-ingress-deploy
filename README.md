@@ -1,4 +1,6 @@
-# Deployment configuration for Kubernetes Ingress Controller 
+# Deployment configuration for Kubernetes Ingress Controller
+
+![Deployment Status](https://argocd.vivaconagua.org/api/badge?name=k8s-ingress&revision=true)
 
 This repository consists of kubernetes manifests that deploy an Ingress Controller on our infrastructure the way we want it to.
 
