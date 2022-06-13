@@ -29,3 +29,8 @@ configMapGenerator:
     namespace: ingress-nginx
     envs:
       - headers.env
+secretGenerator:
+  - name: test-secret
+    namespace: ingress-nginx
+    literals:
+      - "hello=world"
