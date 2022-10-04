@@ -4,6 +4,10 @@ kind: Kustomization
 resources:
   - git::https://github.com/kubernetes/ingress-nginx//deploy/static/provider/baremetal?ref=controller-v1.2.0
 
+replicas:
+  - name: ingress-nginx-controller
+    count: 3
+
 patchesJson6902:
   - target:
       kind: Service
