@@ -1,0 +1,10 @@
+# this patch adds the prometheus.io/scrape annotations to ingress pods while also enabling the controller to emit those metrics
+- op: add
+  path: /spec/template/metadata/annotations
+  value:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "10254"
+
+- op: add
+  path: /spec/template/spec/containers/0/args/-
+  value: --enable-metrics
